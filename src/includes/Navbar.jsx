@@ -13,8 +13,6 @@ import {
 import { useState } from "react";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 
-import StaggeredMenu from "@/components/ui/StaggeredMenu";
-import Container from "@/components/Container";
 
 const NavbarMain = () => {
   const [theme, setTheme] = useState("dark");
