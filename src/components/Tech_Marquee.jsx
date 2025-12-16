@@ -20,7 +20,7 @@ const Tech_Marquee = () => {
   ];
 
   return (
-    <div className="my-12 border-y border-neutral-600/40 w-full selection:bg-highlight-secondry selection:text-white dark:selection:bg-highlight-primary py-8 relative overflow-hidden mask-r-from-80% mask-l-from-80%">
+    <div className="my-12 border-y border-neutral-600/40 w-full max-w-7xl mx-auto selection:bg-highlight-secondry selection:text-white dark:selection:bg-highlight-primary py-8 relative overflow-hidden mask-r-from-80% mask-l-from-80%">
       <div className="flex whitespace-nowrap animate-marquee ">
         {/* First set */}
         {skills.map((skill, index) => (

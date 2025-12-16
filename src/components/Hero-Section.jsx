@@ -28,7 +28,7 @@ const Hero_Section = () => {
             We design. We build. We scale.
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl  lg:text-7xl font-zalando w-full sm:w-[85%] md:w-[80%] xl:w-[90%] font-medium mb-10 mt-4 text-shadow-sm">
+          <h1 className="text-5xl md:text-6xl  lg:text-7xl font-zalando w-full sm:w-[85%] md:w-[80%] xl:w-[90%] font-medium mb-10 mt-4 text-shadow-sm">
             Turning{" "}
             <span className="text-highlight-secondry">ideas & businesses</span>{" "}
             into powerful digital products.
