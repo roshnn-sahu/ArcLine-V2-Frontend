@@ -43,9 +43,10 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(" flex justify-center", containerClassName)}
-        style={{
-          perspective: "1000px",
-        }}>
+        // style={{
+        //   perspective: "1000px",
+        // }}
+        >
         <div
           ref={containerRef}
           onMouseEnter={handleMouseEnter}
