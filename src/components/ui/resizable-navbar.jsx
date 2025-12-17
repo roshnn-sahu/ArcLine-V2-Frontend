@@ -6,7 +6,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-
+import logo from "@/assets/logo/logo-black.png"
 import React, { useRef, useState } from "react";
 
 export const Navbar = ({ children, className }) => {
@@ -177,10 +177,10 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
 export const NavbarLogo = () => {
   return (
     <a
-      href="#"
+      href="/"
       className="relative text-shadow-sm  z-20 mr-4 flex font-zalando font-semibold items-center space-x-2 px-2 py-1 text-lg  text-zinc-800"
     >
-      ArcLine <small className="text-highlight-secondry text-[8px] absolute top-[4px] right-[-10px]">Softs</small>
+      <img src={logo} alt="Logo" className="w-[100px]" />
     </a>
   );
 };

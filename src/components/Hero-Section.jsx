@@ -5,7 +5,7 @@ const Hero_Section = () => {
   return (
     <>
       <Container className=" px-6 selection:bg-highlight-secondry selection:text-white dark:selection:bg-highlight-primary">
-        <div className=" mb-6 pt-22">
+        <div className=" mb-6 pt-12 md:pt-22">
           <span className="text-sm font-semibold font-space">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +28,11 @@ const Hero_Section = () => {
             We design. We build. We scale.
           </span>
 
-          <h1 className="text-5xl md:text-6xl  lg:text-7xl font-zalando w-full sm:w-[85%] md:w-[80%] xl:w-[90%] font-medium mb-10 mt-4 text-shadow-sm">
-            Turning{" "}
-            <span className="text-highlight-secondry">ideas & businesses</span>{" "}
-            into powerful digital products.
+          <h1 className="text-6xl md:text-6xl  lg:text-7xl font-zalando w-full sm:w-[85%] md:w-[80%] xl:w-[80%] font-medium mb-10 mt-4 text-shadow-sm">
+            Transforming{" "}
+            <span className="text-highlight-secondry">idea's</span>{" "}
+            into scalable
+            <span className="text-highlight-secondry"> digital products.</span>{" "}
           </h1>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 items-center my-12 ">
             <span className="h-[1px] w-full bg-zinc-500"></span>
