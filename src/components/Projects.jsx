@@ -7,15 +7,15 @@ const Projects = () => {
   return (
     <Container className="px-4 selection:bg-highlight-secondry selection:text-white dark:selection:bg-highlight-primary">
       <div className="w-full">
-        <div>
+        <div className="text-center">
           <span className="font-normal text-highlight-secondry uppercase font-zalando">
             {" "}
-            <IconNorthStar />
-            My Projects
+            <IconNorthStar className="inline mr-2"/>
+            Our Work{" "}
           </span>
-          <h1 className="text-4xl font-zalando">Selected Projects</h1>
+          <h1 className="text-4xl font-zalando">Featured Projects</h1>
         </div>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
               <CardItem translateZ="100" className="w-full ">
@@ -142,7 +142,6 @@ const Projects = () => {
               </div>
             </CardBody>
           </CardContainer>
-          
         </div>
       </div>
     </Container>

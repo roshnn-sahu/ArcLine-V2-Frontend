@@ -126,7 +126,7 @@ const services = [
     <>
       <Container className="px-4 selection:bg-highlight-secondry selection:text-white dark:selection:bg-highlight-primary">
         <div className="w-full">
-          <div>
+          <div className="text-center">
             <span className="font-normal text-highlight-secondry uppercase font-zalando">
               {" "}
               <IconNorthStar className="inline mr-2" />
@@ -135,7 +135,7 @@ const services = [
             <h2 className="text-4xl font-zalando">Our Services</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12  relative z-10  max-w-7xl mx-auto ">
             {services.map((service, index) => (
               <Service key={service.title} {...service} index={index} />
             ))}

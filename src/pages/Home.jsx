@@ -9,6 +9,7 @@ import Cta from "@/components/Cta";
 import Services from "@/components/Services";
 import { GoogleGeminiEffect } from "@/components/ui/GeminiScrollEffect";
 import FAQSection from "@/components/Faq";
+import WhyChooseUse from "@/components/WhyChooseUs";
 
 const Home = () => {
   const ref = useRef(null);
@@ -46,6 +47,7 @@ const Home = () => {
         />
       </div>
       <Services />
+      <WhyChooseUse/>
       <Projects />
       <Tech_Marquee />
       <FAQSection/>
