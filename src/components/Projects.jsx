@@ -14,6 +14,9 @@ const Projects = () => {
             Our Work{" "}
           </span>
           <h1 className="text-4xl font-zalando">Featured Projects</h1>
+            <p className="max-w-2xl mx-auto mt-2 text-muted-foreground md:text-lg">
+           A showcase of our best work, demonstrating innovation, performance, and real business impact
+              </p>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <CardContainer className="inter-var">

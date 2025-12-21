@@ -133,6 +133,9 @@ const services = [
               What We Serve
             </span>
             <h2 className="text-4xl font-zalando">Our Services</h2>
+            <p className="max-w-2xl mx-auto mt-2 text-muted-foreground md:text-lg">
+        We provide end-to-end web, app, software, and digital solutions tailored to your business needs.
+              </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12  relative z-10  max-w-7xl mx-auto ">

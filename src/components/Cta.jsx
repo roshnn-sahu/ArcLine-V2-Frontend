@@ -7,7 +7,7 @@ const Cta = () => {
       <div className="shadow-lg w-fulll flex flex-col items-center justify-center rounded-lg bg-white py-10 px-4">
         <div className="flex items-center gap-2 bg-[#30af5b]/10 rounded-full px-3 py-1 ">
           <div className="relative h-[6px] w-[6px] flex rounded-full bg-green-800 ">
-            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-600 opacity-75"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-600 opacity-75"></span>
           </div>
           <p className="text-xs">Available For Work</p>
         </div>

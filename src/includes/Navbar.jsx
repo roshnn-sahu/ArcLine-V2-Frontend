@@ -31,8 +31,8 @@ const NavbarMain = () => {
       link: "#projects",
     },
     {
-      name: "Content",
-      link: "#content",
+      name: "Contact",
+      link: "/contact",
     },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
