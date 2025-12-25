@@ -3,7 +3,7 @@ import CoreValues from "@/components/CoreValues";
 import Cta from "@/components/Cta";
 import OurProcess from "@/components/OurProcess";
 import Badge from "@/components/ui/Badge";
-import GetStartedBtn from "@/components/ui/getStartedBtn";
+import GetStartedBtn from "@/components/ui/GetStartedBtn";
 
 import TextBottomBeam from "@/components/ui/TextBottomBeam";
 import { CircleCheckBig } from "lucide-react";
