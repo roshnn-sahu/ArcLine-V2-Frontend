@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-three/fiber": "^9.4.2",
+    "@splinetool/react-spline": "^4.1.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tabler/icons-react": "^3.35.0",
     "@tailwindcss/vite": "^4.1.13",

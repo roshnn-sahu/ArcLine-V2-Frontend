@@ -260,3 +260,7 @@ h2 {
 .canvas-silk {
   position: absolute !important;
 }
+.spline-container canvas{
+  height: 400px !important;
+  width: 800px !important;
+}
