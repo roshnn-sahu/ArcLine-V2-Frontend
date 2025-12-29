@@ -4,21 +4,21 @@ import { IconNorthStar } from "@tabler/icons-react";
 
 const Tech_Marquee = () => {
   const skills = [
-    { name: "Html", icon: "./skills/imgi_2_HTML.svg" },
-    { name: "Css", icon: "./skills/imgi_3_CSS.svg" },
-    { name: "Js", icon: "./skills/imgi_4_JavaScript.svg" },
-    { name: "TypeScript", icon: "./skills/imgi_5_TypeScript.svg" },
-    { name: "React.Js", icon: "./skills/imgi_6_React.js.svg" },
-    { name: "Next.Js", icon: "./skills/imgi_7_Next.js.svg" },
-    { name: "Redux", icon: "./skills/imgi_9_Redux.svg" },
-    { name: "Node.Js", icon: "./skills/imgi_10_Node.js.svg" },
-    { name: "Express.Js", icon: "./skills/imgi_11_Express.js.svg" },
-    { name: "MySQL", icon: "./skills/imgi_12_MySQL.svg" },
-    { name: "MongoDB", icon: "./skills/imgi_13_MongoDB.svg" },
-    { name: "Firebase", icon: "./skills/imgi_17_Firebase.svg" },
-    { name: "GSAP", icon: "./skills/imgi_19_GSAP.svg" },
-    { name: "TailwindCss", icon: "./skills/imgi_22_TailwindCSS.svg" },
-    { name: "Git", icon: "./skills/imgi_23_GIT.svg" },
+    { name: "Html", icon: "/skills/imgi_2_HTML.svg" },
+    { name: "Css", icon: "/skills/imgi_3_CSS.svg" },
+    { name: "Js", icon: "/skills/imgi_4_JavaScript.svg" },
+    { name: "TypeScript", icon: "/skills/imgi_5_TypeScript.svg" },
+    { name: "React.Js", icon: "/skills/imgi_6_React.js.svg" },
+    { name: "Next.Js", icon: "/skills/imgi_7_Next.js.svg" },
+    { name: "Redux", icon: "/skills/imgi_9_Redux.svg" },
+    { name: "Node.Js", icon: "/skills/imgi_10_Node.js.svg" },
+    { name: "Express.Js", icon: "/skills/imgi_11_Express.js.svg" },
+    { name: "MySQL", icon: "/skills/imgi_12_MySQL.svg" },
+    { name: "MongoDB", icon: "/skills/imgi_13_MongoDB.svg" },
+    { name: "Firebase", icon: "/skills/imgi_17_Firebase.svg" },
+    { name: "GSAP", icon: "/skills/imgi_19_GSAP.svg" },
+    { name: "TailwindCss", icon: "/skills/imgi_22_TailwindCSS.svg" },
+    { name: "Git", icon: "/skills/imgi_23_GIT.svg" },
   ];
 
   return (
