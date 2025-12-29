@@ -5,11 +5,11 @@ import Spline3D from "./ui/Spline3D.jsx";
 
 const Hero_Section = () => {
   return (
-    <section className="relative  ">
+    <section className="relative">
       {/* Content */}
-      <Container className=" grid grid-cols-1  lg:grid-cols-2 relative z-10 px-6 pt-28 pb-16 ">
+      <Container className="relative z-10 grid grid-cols-1 px-6 pt-28 pb-16 lg:grid-cols-2">
         <div>
-          <span className="text-sm font-semibold font-space flex items-center justify-center lg:justify-start">
+          <span className="font-space flex items-center justify-center text-sm font-semibold lg:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -31,19 +31,18 @@ const Hero_Section = () => {
             We design. We build. We scale.
           </span>
 
-          <h1 className="text-4xl md:text-6xl  font-zalando font-semibold max-w-4xl mt-6 mb-8  tracking-tight text-center lg:text-start">
+          <h1 className="font-zalando mt-6 mb-8 max-w-4xl text-center text-4xl font-semibold tracking-tight md:text-6xl lg:text-start">
             Turning <span className="text-secondary">idea&apos;s</span> into{" "}
             <span className="text-secondary">digital</span> products
           </h1>
 
-          <p className="text-zinc-700 max-w-xl text-sm mb-6 text-center lg:text-start">
+          <p className="mx-auto mb-6 flex max-w-xl text-center text-sm text-zinc-700 lg:text-start">
             We build end-to-end digital solutions—from strategy and development
             to scalable, user-focused experiences that drive real business
             growth.
           </p>
-          <div className="w-full text-start">
-
-          <GetStartedBtn />
+          <div className="mt-6 flex justify-center lg:justify-start">
+            <GetStartedBtn />
           </div>
         </div>
 

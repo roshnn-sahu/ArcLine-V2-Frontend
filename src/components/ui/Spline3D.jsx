@@ -11,13 +11,13 @@ export default function Spline3D() {
   }
 
   return (
-    <div className="h-full w-full mask-x-from-60% mask-x-to-90% mask-y-from-60% mask-y-to-90%">
+    <div className="mx-auto h-full w-full mask-y-from-60% mask-y-to-90% mask-x-from-60% mask-x-to-90%">
       <Spline
         style={{
           height: "100%",
           width: "100%",
         }}
-        className=" overflow-none spline-container object-center "
+        className="overflow-none spline-container object-center"
         scene="https://prod.spline.design/q2JiBhhjiJgHWP3N/scene.splinecode"
         onLoad={onLoad}
         onMouseDown={onMouseDown}
