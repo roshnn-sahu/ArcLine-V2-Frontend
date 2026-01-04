@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../components/Container.jsx";
 import GetStartedBtn from "./ui/GetStartedBtn.jsx";
 import Spline3D from "./ui/Spline3D.jsx";
+import Subheading from "./ui/Subheading.jsx";
 
 const Hero_Section = () => {
   return (
@@ -20,7 +21,7 @@ const Hero_Section = () => {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-hand-stop text-secondary mr-2"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-hand-stop text-secondary dark:text-primary mr-2"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M8 13v-7.5a1.5 1.5 0 0 1 3 0v6.5" />
@@ -32,15 +33,15 @@ const Hero_Section = () => {
           </span>
 
           <h1 className="font-zalando mt-6 mb-8 max-w-4xl text-center text-4xl font-semibold tracking-tight md:text-6xl lg:text-start">
-            Turning <span className="text-secondary">idea&apos;s</span> into{" "}
-            <span className="text-secondary">digital</span> products
+            Turning <span className="text-secondary dark:text-primary">idea&apos;s</span> into{" "}
+            <span className="text-secondary dark:text-primary">digital</span> products
           </h1>
 
-          <p className="mx-auto mb-6 flex max-w-xl text-center text-sm text-zinc-700 lg:text-start">
+          <Subheading className="mx-auto mb-6 flex max-w-xl text-center  text-zinc-700 dark:text-neutral-300 lg:text-start">
             We build end-to-end digital solutions—from strategy and development
             to scalable, user-focused experiences that drive real business
             growth.
-          </p>
+          </Subheading>
           <div className="mt-6 flex justify-center lg:justify-start">
             <GetStartedBtn />
           </div>

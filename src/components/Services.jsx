@@ -13,6 +13,7 @@ import {
 } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
+import Subheading from "./ui/Subheading";
 
 const Services = () => {
   const content = [
@@ -124,22 +125,22 @@ const Services = () => {
   ];
   return (
     <>
-      <Container className="px-4 selection:bg-secondary selection:text-white dark:selection:bg-highlight-primary">
+      <Container className=" px-4 selection:text-white">
         <div className="w-full">
           <div className="text-center">
-            <span className="font-normal text-secondary uppercase font-zalando">
+            <span className="text-secondary font-zalando font-normal uppercase">
               {" "}
-              <IconNorthStar className="inline mr-2" />
+              <IconNorthStar className="mr-2 inline" />
               What We Serve
             </span>
-            <h2 className="text-4xl font-zalando">Our Services</h2>
-            <p className="max-w-2xl mx-auto mt-2 text-muted-foreground md:text-lg">
+            <h2 className="font-zalando text-4xl">Our Services</h2>
+            <Subheading className="text-muted-foreground mx-auto mt-2 max-w-2xl md:text-lg">
               We provide end-to-end web, app, software, and digital solutions
               tailored to your business needs.
-            </p>
+            </Subheading>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12  relative z-10  max-w-7xl mx-auto ">
+          <div className="relative z-10 mx-auto mt-12 grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <Service key={service.title} {...service} index={index} />
             ))}
@@ -156,32 +157,47 @@ const Service = ({ title, description, icon, index }) => {
   return (
     <div
       className={cn(
-        "flex flex-col border-r border-secondary/30  py-10 relative group/feature dark:border-neutral-800 ",
+        "border-secondary/30 group/feature group relative flex flex-col border-r py-10 dark:border-neutral-800",
         (index === 0 || index === 4) && "border-l dark:border-neutral-800",
         index < 4 && "border-b border-l lg:border-b dark:border-neutral-800",
 
-        index >= 4 && "border-t border-l lg:border-t-0 dark:border-neutral-800"
+        index >= 4 && "border-t border-l lg:border-t-0 dark:border-neutral-800",
       )}
     >
+      {/* pattern */}
+      <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover/feature:opacity-100">
+        <div
+          className={cn(
+            "absolute inset-0 bg-[image:repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]",
+            "bg-[size:10px_10px] opacity-50 dark:bg-neutral-900",
+            index < 4 && "mask-t-from-40% mask-t-to-80%",
+            index >= 4 && "mask-b-from-40% mask-b-to-80%",
+          )}
+        />
+      </div>
+
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-white/50 dark:from-neutral-800 to-transparent pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-t from-white/50 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100 dark:from-neutral-800" />
       )}
       {index >= 4 && (
-        <div className=" opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-white/50 dark:from-neutral-800 to-transparent pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-b from-white/50 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100 dark:from-neutral-800" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
-        {icon}
-      </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-secondary transition-all duration-200 origin-center" />
 
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100 font-zalando">
-          {title}
-        </span>
+      <div className="relative z-10 transition duration-200 hover:bg-transparent">
+        <div className="relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
+          {icon}
+        </div>
+        <div className="relative z-10 mb-2 px-10 text-lg font-bold">
+          <div className="group-hover/feature:bg-secondary absolute inset-y-0 left-0 h-6 w-1 origin-center rounded-tr-full rounded-br-full bg-neutral-300 transition-all duration-200 group-hover/feature:h-8 dark:bg-neutral-700" />
+
+          <span className="font-zalando inline-block text-neutral-800 transition duration-200 group-hover/feature:translate-x-2 dark:text-neutral-100">
+            {title}
+          </span>
+        </div>
+        <p className="relative z-10 max-w-xs px-10 text-sm text-neutral-600 dark:text-neutral-300">
+          {description}
+        </p>
       </div>
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
-        {description}
-      </p>
     </div>
   );
 };

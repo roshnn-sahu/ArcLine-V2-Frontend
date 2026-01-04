@@ -1,8 +1,14 @@
-import React from 'react';
+import React from "react";
+import { cn } from "@/lib/utils";
 
-const Container = ({ children,className }) => {
+const Container = ({ children, className }) => {
   return (
-    <section className={`max-w-7xl mx-auto  py-6   ${className}` }>
+    <section
+      className={cn(
+        `selection:bg-secondary dark:selection:bg-primary mx-auto max-w-7xl py-6 selection:text-white dark:selection:text-zinc-800`,
+        className,
+      )}
+    >
       {children}
     </section>
   );

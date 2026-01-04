@@ -1073,7 +1073,7 @@ export default function WhyChooseUs() {
                 className="bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group border rounded-md"
               >
                 {/* SVG Illustration */}
-                <div className="mb-6 border-b drop-shadow-sm ">
+                <div className="mb-6 border-b drop-shadow-sm  bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px]">
                   {illustrations[item.step]}
                 </div>
 

@@ -8,7 +8,6 @@ import GetStartedBtn from "@/components/ui/GetStartedBtn";
 import TextBottomBeam from "@/components/ui/TextBottomBeam";
 import { CircleCheckBig } from "lucide-react";
 
-
 export const metadata = {
   title: "About Us | Arcline Software Solutions",
   description:
@@ -21,7 +20,6 @@ export const metadata = {
   ],
 };
 
-
 export default function AboutPage() {
   const stats = [
     { value: "50+", label: "Projects Delivered" },
@@ -32,23 +30,23 @@ export default function AboutPage() {
 
   return (
     <div className="w-full">
-      <Container className="flex flex-col ">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
-        <main className=" pt-32 pb-16 md:pt-30 md:pb-24 px-4 sm:px-6 lg:px-8">
+      <Container className="flex flex-col">
+        <div className="bg-background absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_50%,transparent_100%)] bg-[size:4rem_4rem] dark:bg-black dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)]"></div>
+        <main className="px-4 pt-32 pb-16 sm:px-6 md:pt-30 md:pb-24 lg:px-8">
           {/* Hero Section */}
 
-          <section className=" mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto  text-center">
+          <section className="mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl text-center">
               <Badge className="mb-3">About ArcLine</Badge>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-zalando font-semibold text-shadow-sm tracking-tight mb-2 mt-3 text-balance">
+              <h1 className="font-zalando mt-3 mb-2 text-4xl font-semibold tracking-tight text-balance text-shadow-sm md:text-5xl lg:text-7xl">
                 Building the <span className="text-secondary">Future</span> of
                 Digital Innovation
               </h1>
 
               <TextBottomBeam />
 
-              <p className="mb-8 text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-pretty">
                 We transform ambitious ideas into exceptional digital products
                 through innovative design, robust development, and strategic
                 thinking. Your success is our mission.
@@ -59,15 +57,15 @@ export default function AboutPage() {
           </section>
 
           {/* Stats Section */}
-          <section className="py-12 md:py-18 ">
+          <section className="py-12 md:py-18">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+              <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-2 text-shadow-sm">
+                    <div className="text-secondary mb-2 text-3xl font-bold text-shadow-sm md:text-4xl lg:text-5xl">
                       {stat.value}
                     </div>
-                    <div className="text-sm md:text-base text-muted-foreground">
+                    <div className="text-muted-foreground text-sm md:text-base">
                       {stat.label}
                     </div>
                   </div>
@@ -79,12 +77,12 @@ export default function AboutPage() {
           {/* Our Story Section */}
           <section className="py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-zalando font-semibold tracking-tight mb-6 text-center">
+              <div className="mx-auto max-w-4xl">
+                <h2 className="font-zalando mb-6 text-center text-3xl font-semibold tracking-tight md:text-4xl">
                   Our Story
                 </h2>
 
-                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <div className="text-muted-foreground space-y-6 text-lg leading-relaxed">
                   <p>
                     Founded with a vision to bridge the gap between complex
                     business challenges and elegant digital solutions, ArcLine
@@ -112,14 +110,14 @@ export default function AboutPage() {
           </section>
 
           {/* Core Values Section */}
-          <section className="py-16 md:py-24 ">
+          <section className="py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className=" mx-auto">
-                <div className="text-center mb-12 md:mb-16">
-                  <h2 className="text-3xl md:text-4xl font-zalando semibold tracking-tight mb-4">
+              <div className="mx-auto">
+                <div className="mb-12 text-center md:mb-16">
+                  <h2 className="font-zalando semibold mb-4 text-3xl tracking-tight md:text-4xl">
                     Our Core Values
                   </h2>
-                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                     The principles that guide our work and define our commitment
                     to excellence.
                   </p>
@@ -133,12 +131,12 @@ export default function AboutPage() {
           {/* Our Process Section */}
           <section className="py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12 md:mb-16">
-                  <h2 className="text-3xl md:text-4xl font-semibold font-zalando tracking-tight mb-4">
+              <div className="mx-auto max-w-6xl">
+                <div className="mb-12 text-center md:mb-16">
+                  <h2 className="font-zalando mb-4 text-3xl font-semibold tracking-tight md:text-4xl">
                     Our Process
                   </h2>
-                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                     A proven methodology that ensures successful project
                     delivery from concept to launch.
                   </p>
@@ -150,18 +148,18 @@ export default function AboutPage() {
           </section>
 
           {/* Why Choose Us Section */}
-          <section className="py-16 md:py-24 ">
+          <section className="py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              <div className="mx-auto max-w-4xl">
+                <div className="mb-12 text-center">
+                  <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
                     Why Choose ArcLine
                   </h2>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-muted-foreground text-lg">
                     We bring more than just technical skills to the table.
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid gap-6 md:grid-cols-2">
                   {[
                     "Proven track record of successful project delivery",
                     "Deep expertise across multiple technologies and platforms",
@@ -173,7 +171,7 @@ export default function AboutPage() {
                     "Focus on long-term partnerships and mutual success",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CircleCheckBig className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" />
+                      <CircleCheckBig className="text-secondary mt-0.5 h-6 w-6 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
                     </div>
                   ))}

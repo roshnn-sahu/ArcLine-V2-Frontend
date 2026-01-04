@@ -1,13 +1,15 @@
-"use client";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import { SparklesCore } from "../ui/sparkles";
-import React from "react";
 import Container from "../Container";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Subheading from "./Subheading";
 
 const transition = {
   duration: 0,
-  ease: "linear",
+  ease: "easeInOut",
 };
 
 export const GoogleGeminiEffect = ({
@@ -16,40 +18,74 @@ export const GoogleGeminiEffect = ({
   description,
   className,
 }) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const GeminiContainer = useRef(null);
+
+  useGSAP(
+    () => {
+      const sections = GeminiContainer.current;
+      gsap.fromTo(
+        sections,
+        {
+          y: 50,
+          opacity: 0,
+          scale: 0.7,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          ease: "power",
+          scrollTrigger: {
+            trigger: sections,
+            start: "top 70%",
+            end: "bottom 10%",
+            scrub: true,
+          },
+        },
+      );
+    },
+    { scope: GeminiContainer },
+  );
+  console.log(GeminiContainer.current, "hhhh");
+
   return (
-    <Container className="h-[200vh] pt-20 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent),linear-gradient(to_bottom,black_90%,transparent)] [mask-composite:intersect]">
-      <div className={cn("sticky top-100 lg:top-40  ", className)}>
-        <div className=" w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <h2 className="font-zalando text-4xl sm:text-5xl lg:text-7xl font-normal pb-4 text-center bg-clip-text text-black bg-gradient-to-b from-neutral-100 to-neutral-300">
-            We Build{" "}
-            <span className="text-secondary">Experiences </span>{" "}
+    <Container className="h-[200vh] [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent),linear-gradient(to_bottom,black_90%,transparent)] [mask-composite:intersect] pt-20">
+      <div
+        ref={GeminiContainer}
+        className={cn("sticky top-100 lg:top-40", className)}
+      >
+        <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-md">
+          <h2 className="font-zalando bg-gradient-to-b from-neutral-100 to-neutral-300 bg-clip-text pb-4 text-center text-4xl font-normal text-black sm:text-5xl lg:text-7xl">
+            We Build <span className="text-secondary">Experiences </span>{" "}
             <span className="block text-3xl lg:text-5xl">
               {" "}
               Not Just Products
             </span>
           </h2>
         </div>
-        <div className="w-xl h-2 relative z-50 mx-auto">
+        <div className="relative z-50 mx-auto h-2 w-xl">
           {/* Gradients */}
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[2px] w-3/4 blur-sm z-20" />
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-px w-3/4 z-20" />
-          <div className="absolute inset-x-50 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[5px] w-1/4 blur-sm z-20" />
-          <div className="absolute inset-x-50 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-px w-1/4 z-20" />
+          <div className="via-secondary absolute inset-x-20 top-0 z-20 h-[2px] w-3/4 bg-gradient-to-r from-transparent to-transparent blur-sm" />
+          <div className="via-secondary absolute inset-x-20 top-0 z-20 h-px w-3/4 bg-gradient-to-r from-transparent to-transparent" />
+          <div className="via-secondary absolute inset-x-50 top-0 z-20 h-[5px] w-1/4 bg-gradient-to-r from-transparent to-transparent blur-sm" />
+          <div className="via-secondary absolute inset-x-50 top-0 z-20 h-px w-1/4 bg-gradient-to-r from-transparent to-transparent" />
         </div>
 
-        <p className="text-xs  md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto px-4">
+        <Subheading className="mx-auto mt-4 max-w-lg px-4 text-center text-xs font-normal text-neutral-400 md:text-xl">
           Design-driven development that blends performance, motion, and
           clarity—crafted to grow with your users and scale with your vision.
-        </p>
-        <div className="w-full top-[9rem]  sm:top-[11rem]  flex items-center justify-center bg-red-transparent absolute ">
-          <button className=" duration-150 shadow-md hover:shadow-secondary/50 font-bold text-shadow-sm bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-10 z-30 md:text-base text-black text-xs  w-fit mx-auto border border-secondary/50  ">
+        </Subheading>
+        <div className="bg-red-transparent absolute top-[9rem] flex w-full items-center justify-center sm:top-[11rem]">
+          <button className="hover:shadow-secondary/50 border-secondary/50 z-30 mx-auto mt-10 w-fit rounded-full border bg-white px-2 py-1 text-xs font-bold text-black shadow-md duration-150 text-shadow-sm md:mt-24 md:px-4 md:py-2 md:text-base">
             ArcLine.com
           </button>
 
           <svg
             viewBox="0 0 1440 890"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute lg:-top-85  w-full"
+            className="absolute w-full lg:-top-85"
           >
             <motion.path
               d="M0 663C145.5 663 191 666.265 269 647C326.5 630 339.5 621 397.5 566C439 531.5 455 529.5 490 523C509.664 519.348 521 503.736 538 504.236C553.591 504.236 562.429 514.739 584.66 522.749C592.042 525.408 600.2 526.237 607.356 523.019C624.755 515.195 641.446 496.324 657 496.735C673.408 496.735 693.545 519.572 712.903 526.769C718.727 528.934 725.184 528.395 730.902 525.965C751.726 517.115 764.085 497.106 782 496.735C794.831 496.47 804.103 508.859 822.469 518.515C835.13 525.171 850.214 526.815 862.827 520.069C875.952 513.049 889.748 502.706 903.5 503.736C922.677 505.171 935.293 510.562 945.817 515.673C954.234 519.76 963.095 522.792 972.199 524.954C996.012 530.611 1007.42 534.118 1034 549C1077.5 573.359 1082.5 594.5 1140 629C1206 670 1328.5 662.5 1440 662.5"

@@ -13,10 +13,11 @@ import {
 import { useState } from "react";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { Skiper58, TextRoll } from "@/components/ui/SkiperNavigation";
+import ToggleTheme from "@/components/ToggleTheme.jsx"
 
 
 const NavbarMain = () => {
-  const [theme, setTheme] = useState("dark");
+
 
   const navItems = [
     {
@@ -51,11 +52,7 @@ const NavbarMain = () => {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <NavbarButton variant="secondary">
-              {theme === "dark" ? (
-                <IconSun className="h-5 w-5 text-neutral-600" />
-              ) : (
-                <IconMoon className="h-4 w-4 text-neutral-600" />
-              )}
+      <ToggleTheme/>
             </NavbarButton>
           </div>
         </NavBody>
