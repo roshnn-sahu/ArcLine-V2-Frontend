@@ -48,7 +48,7 @@ export const GoogleGeminiEffect = ({
     },
     { scope: GeminiContainer },
   );
-  console.log(GeminiContainer.current, "hhhh");
+
 
   return (
     <Container className="h-[200vh] [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent),linear-gradient(to_bottom,black_90%,transparent)] [mask-composite:intersect] pt-20">
@@ -57,7 +57,7 @@ export const GoogleGeminiEffect = ({
         className={cn("sticky top-100 lg:top-40", className)}
       >
         <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-md">
-          <h2 className="font-zalando bg-gradient-to-b from-neutral-100 to-neutral-300 bg-clip-text pb-4 text-center text-4xl font-normal text-black sm:text-5xl lg:text-7xl">
+          <h2 className="font-zalando bg-gradient-to-b from-neutral-100 to-neutral-300 bg-clip-text pb-4 text-center text-4xl font-normal  sm:text-5xl lg:text-7xl">
             We Build <span className="text-secondary">Experiences </span>{" "}
             <span className="block text-3xl lg:text-5xl">
               {" "}

@@ -4,6 +4,7 @@ import Cta from "@/components/Cta";
 import OurProcess from "@/components/OurProcess";
 import Badge from "@/components/ui/Badge";
 import GetStartedBtn from "@/components/ui/GetStartedBtn";
+import HeroBgPattern from "@/components/ui/HeroBgPattern";
 
 import TextBottomBeam from "@/components/ui/TextBottomBeam";
 import { CircleCheckBig } from "lucide-react";
@@ -31,7 +32,7 @@ export default function AboutPage() {
   return (
     <div className="w-full">
       <Container className="flex flex-col">
-        <div className="bg-background absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_50%,transparent_100%)] bg-[size:4rem_4rem] dark:bg-black dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)]"></div>
+        <HeroBgPattern />
         <main className="px-4 pt-32 pb-16 sm:px-6 md:pt-30 md:pb-24 lg:px-8">
           {/* Hero Section */}
 

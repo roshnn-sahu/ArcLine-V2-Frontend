@@ -34,7 +34,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --pattern-fg: oklch(63.745% 0.05515 158.569);
+  --pattern-fg: oklch(70.8% 0 0) ;
   --space: "Space Grotesk", sans-serif;
   --poppins: "Poppins", sans-serif;
   --zalando: "Zalando Sans Expanded", sans-serif;
@@ -255,5 +255,10 @@ h2 {
   height: 400px !important;
   max-width: 800px !important;
   width: 100% !important;
-  filter: drop-shadow(2px 2px 2px #005d1983);
+  filter: drop-shadow(2px 2px 2px #01742083);
+}
+
+/* Dark theme override */
+.dark .spline-container canvas {
+  filter: drop-shadow(2px 2px 1px #9cee4a87);
 }

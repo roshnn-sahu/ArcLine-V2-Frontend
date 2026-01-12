@@ -3,10 +3,19 @@ import Container from "../components/Container.jsx";
 import GetStartedBtn from "./ui/GetStartedBtn.jsx";
 import Spline3D from "./ui/Spline3D.jsx";
 import Subheading from "./ui/Subheading.jsx";
+import { cn } from "@/lib/utils.js";
 
 const Hero_Section = () => {
   return (
     <section className="relative">
+      <div
+        className={cn(
+          "absolute inset-0 z-10 size-full",
+          "bg-[radial-gradient(circle_at_1px_1px,black_1px,transparent_0)] [background-size:15px_15px] [opacity:8%] [background-position-x:7.5px] [background-position-y:7.5px]",
+          "dark:bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] dark:mask-y-from-80% dark:[opacity:16%]",
+        )}
+      />
+
       {/* Content */}
       <Container className="relative z-10 grid grid-cols-1 px-6 pt-28 pb-16 lg:grid-cols-2">
         <div>

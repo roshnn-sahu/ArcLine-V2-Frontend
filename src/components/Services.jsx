@@ -125,7 +125,7 @@ const Services = () => {
   ];
   return (
     <>
-      <Container className=" px-4 selection:text-white">
+      <Container className="px-4 selection:text-white">
         <div className="w-full">
           <div className="text-center">
             <span className="text-secondary font-zalando font-normal uppercase">
@@ -157,7 +157,7 @@ const Service = ({ title, description, icon, index }) => {
   return (
     <div
       className={cn(
-        "border-secondary/30 group/feature group relative flex flex-col border-r py-10 dark:border-neutral-800",
+        "border-secondary/30 group/feature group group relative flex flex-col border-r py-10 dark:border-neutral-800",
         (index === 0 || index === 4) && "border-l dark:border-neutral-800",
         index < 4 && "border-b border-l lg:border-b dark:border-neutral-800",
 
@@ -184,7 +184,7 @@ const Service = ({ title, description, icon, index }) => {
       )}
 
       <div className="relative z-10 transition duration-200 hover:bg-transparent">
-        <div className="relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
+        <div className="group-hover:text-secondary dark:group-hover:text-primary relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
           {icon}
         </div>
         <div className="relative z-10 mb-2 px-10 text-lg font-bold">

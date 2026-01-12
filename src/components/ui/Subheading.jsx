@@ -5,7 +5,7 @@ const Subheading = ({ children, className }) => {
   return (
     <>
       <p
-        className={cn("text-md text-zinc-700 dark:text-neutral-300", className)}
+        className={cn("text-md font-normal text-zinc-700 dark:text-neutral-300", className)}
       >
         {children}
       </p>

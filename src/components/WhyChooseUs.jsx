@@ -11,6 +11,7 @@ import {
 
 import { IconNorthStar } from "@tabler/icons-react";
 import Container from "./Container";
+import { cn } from "@/lib/utils";
 
 const steps = [
   {
@@ -68,10 +69,10 @@ const icons = {
 
 const illustrations = {
   "01": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -240,10 +241,10 @@ const illustrations = {
     </div>
   ),
   "02": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -408,10 +409,10 @@ const illustrations = {
     </div>
   ),
   "03": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -576,10 +577,10 @@ const illustrations = {
     </div>
   ),
   "04": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -715,10 +716,10 @@ const illustrations = {
     </div>
   ),
   "05": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -876,10 +877,10 @@ const illustrations = {
     </div>
   ),
   "06": (
-    <div className="w-full h-48 flex items-center justify-center">
+    <div className="flex h-48 w-full items-center justify-center">
       <svg
         viewBox="0 0 240 180"
-        className="w-full h-full"
+        className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -1032,26 +1033,34 @@ const illustrations = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full py-6 md:py-12 bg-muted/30 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-background dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_2px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_2px)] dark:bg-[linear-gradient(to_right,#1f1f1f_2px,transparent_2px),linear-gradient(to_bottom,#1f1f1f_2px,transparent_2px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
+    <section className="bg-muted/30 relative w-full overflow-hidden py-6 md:py-12">
+      {/* pattern */}
+      <div className="absolute inset-0 z-0 opacity-30 transition-opacity duration-300 dark:opacity-25">
+        <div
+          className={cn(
+            "absolute inset-0 bg-[image:repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]",
+            "bg-[size:10px_10px] opacity-50 dark:bg-neutral-900",
+          )}
+        />
+      </div>
 
-      <Container className="  px-4 md:px-6 relative">
+      <Container className="relative px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center mb-16"
+          className="mb-16 flex flex-col items-center justify-center space-y-4 text-center"
         >
-          <span className="font-normal text-secondary uppercase font-zalando">
+          <span className="text-secondary font-zalando font-normal uppercase">
             {" "}
-            <IconNorthStar className="inline mr-2" />
+            <IconNorthStar className="mr-2 inline" />
             Our Approach
           </span>
-          <h2 className="text-3xl md:text-4xl font-zalando tracking-tight">
+          <h2 className="font-zalando text-3xl tracking-tight md:text-4xl">
             How We Deliver <span className="text-secondary">Results</span>
           </h2>
-          <p className="max-w-2xl text-muted-foreground md:text-lg">
+          <p className="text-muted-foreground max-w-2xl md:text-lg">
             We build scalable digital solutions through a clear, results-driven
             process focused on performance and growth.
           </p>
@@ -1063,35 +1072,35 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  "
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {steps.map((item, index) => {
             const Icon = icons[item.icon];
             return (
               <div
                 key={index}
-                className="bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group border rounded-md"
+                className="bg-card group rounded-md border p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {/* SVG Illustration */}
-                <div className="mb-6 border-b drop-shadow-sm  bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px]">
+                <div className="mb-6 border-b bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px] drop-shadow-sm">
                   {illustrations[item.step]}
                 </div>
 
                 {/* Step badge and icon */}
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-secondary font-semibold text-sm border">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="text-secondary inline-flex h-10 w-10 items-center justify-center rounded-full border bg-slate-100 text-sm font-semibold">
                     {item.step}
                   </span>
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-muted text-muted-foreground group-hover:bg-secondary group-hover:text-white transition-colors">
-                    <Icon className="w-5 h-5" strokeWidth={1.5} />
+                  <div className="bg-muted text-muted-foreground group-hover:bg-secondary flex h-10 w-10 items-center justify-center rounded-lg transition-colors group-hover:text-white">
+                    <Icon className="h-5 w-5" strokeWidth={1.5} />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold font-zalando mb-3 text-neutral-600">
+                <h3 className="font-zalando mb-3 text-xl font-semibold text-neutral-600">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
