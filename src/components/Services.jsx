@@ -184,7 +184,7 @@ const Service = ({ title, description, icon, index }) => {
       )}
 
       <div className="relative z-10 transition duration-200 hover:bg-transparent">
-        <div className="group-hover:text-secondary dark:group-hover:text-primary relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
+        <div className="group-hover:text-secondary dark:group-hover:text-secondary relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
           {icon}
         </div>
         <div className="relative z-10 mb-2 px-10 text-lg font-bold">
