@@ -5,6 +5,10 @@
       "dest": "/assets/$1"
     },
     {
+      "src": "^/(?!api).*\\.(jpg|jpeg|png|gif|svg|webp|ico|css|js)$",
+      "dest": "/$0"
+    },
+    {
       "src": "^/(.*)",
       "dest": "/index.html"
     }
