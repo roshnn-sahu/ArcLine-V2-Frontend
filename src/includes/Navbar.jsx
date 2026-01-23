@@ -64,12 +64,12 @@ const NavbarMain = () => {
         <NavBody className="backdrop:blur-md">
           {visible && (
             <BorderBeam
-              colorFrom="#7400ff"
-              colorTo="#9b41ff"
-              size={50}
+              colorFrom="#30af5b"
+              colorTo="#30af5b"
+              size={20}
               duration={6}
-              borderThickness={2}
-              glowIntensity={5}
+              borderThickness={8}
+              glowIntensity={20}
             />
           )}
           <NavbarLogo />
